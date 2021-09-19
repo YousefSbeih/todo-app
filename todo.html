@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <link rel="stylesheet" href="todo.css" />
+    <link rel="stylesheet" href="task.css" />
+    <script defer src="index.js"></script>
+    <script defer src="drag.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-div">
+        <div class="nav-box">
+          <img src="./assets/todo.png" alt="" class="logo" />
+        </div>
+        <div class="nav-box">
+          <h1 class="nav-h1">My todo app</h1>
+        </div>
+        <div class="nav-box">
+          <img src="./assets/mypic.jpg" alt="" class="my-img" />
+        </div>
+      </div>
+    </nav>
+    <main class="main-todo">
+      <div class="todo first-box">
+        <div class="in-todo">
+          <h6 class="todo-h6">TO DO</h6>
+          <select
+            name="sort-tasks"
+            id="sort-tasks"
+            aria-placeholder="sort by"
+            title="sort by"
+          >
+            <option disabled selected>sort by</option>
+            <option value="time-added">time added</option>
+            <option value="severity">severity</option>
+            <option value="alpha">A-Z</option>
+          </select>
+        </div>
+        <div class="todos-with-button">
+          <button class="add-button" hidden>
+            <div class="add-button-div">
+              <h6>Add task</h6>
+              <img class="add-vector" src="./assets/add.jpg" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="todo">
+        <div class="in-todo">
+          <h6 class="todo-h6">In Progress</h6>
+        </div>
+      </div>
+      <div class="todo">
+        <div class="in-todo">
+          <h6 class="todo-h6">Done</h6>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal-bg">
+      <div class="moadl">
+        <h1 class="modal-titel">Add Task</h1>
+        <form id="add-task">
+          <div class="modal-item">
+            <label for="name">name</label>
+            <input name="name" id="name" type="text" required />
+          </div>
+          <div class="modal-item">
+            <label for="description">descriptin</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="15"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div class="modal-item">
+            <label for="severity">severity</label>
+            <select id="severity" name="severity">
+              <option value="normal">normal</option>
+              <option value="important">important</option>
+              <option value="urgent">urgent</option>
+            </select>
+          </div>
+          <div class="modal-item modal-buttons">
+            <button
+              type="submit"
+              class="modal-button"
+              style="background-color: #7c83fd"
+            >
+              Add
+            </button>
+            <button class="modal-button cancel-button">cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
